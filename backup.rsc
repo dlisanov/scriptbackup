@@ -23,7 +23,7 @@
 :if ($size>124) do {
     /system backup save name=$backupfilename;
     :if($copyftp) do={ 
-        /tool fetch address=$ftpaddr src-path=$backupfilename user=$ftpuser password=$ftppass port=21 upload=yes mode=ftp dst-path=($ftpputremote . $datetext . "backup.")
+        /tool fetch address=$ftpaddr src-path=$backupfilename user=$ftpuser password=$ftppass port=21 upload=yes mode=ftp dst-path=($ftpputremote . $datetext . "backup")
         delay 15s;
      }
      :if($noticeonmail) do={ 
